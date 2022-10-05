@@ -1,0 +1,19 @@
+.modal-container {
+  width: 450px;
+  z-index: 9999;
+  margin: 0 auto;
+  position: fixed;
+  top: 45%;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+
+.modal-actions {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin: 15px 7.5px 7.5px;
+}
