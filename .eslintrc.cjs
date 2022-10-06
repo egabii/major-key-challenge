@@ -21,6 +21,6 @@ module.exports = {
   ],
   rules: {
     '@typescript-eslint/triple-slash-reference': 'off',
-    '@typescript-eslint/explicit-function-return-type': 'warn'
+    '@typescript-eslint/explicit-function-return-type': 'off'
   }
 }
