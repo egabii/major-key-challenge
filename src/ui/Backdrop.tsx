@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import './backdrop.css'
+import './styles/backdrop.css'
 
 interface BackdropProps {
   open: boolean,

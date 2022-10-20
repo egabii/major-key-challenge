@@ -1,15 +1,11 @@
-import { useEffect, useState } from "react";
-import { Backdrop } from "../backdrop"; 
-import './modal.css';
+import React, { useEffect, useState } from "react";
+import Backdrop from "./Backdrop"; 
+import './styles/modal.css';
 
 interface ModalProps {
   open: boolean,
   onCancel: () => void;
   onConfirm: (value: string) => void
-}
-
-interface ChangeEvent {
-  target: { value: string };
 }
 
 export default function Modal({open, onCancel, onConfirm}: ModalProps): JSX.Element {
@@ -18,7 +14,7 @@ export default function Modal({open, onCancel, onConfirm}: ModalProps): JSX.Elem
 
   useEffect(() => {
     setOpenModal(open);
-  }, [open])
+  }, [open]);
 
   const onCloseHander = (): void => {
     setOpenModal(false);
@@ -33,7 +29,7 @@ export default function Modal({open, onCancel, onConfirm}: ModalProps): JSX.Elem
     console.log('agregando item a la lista');
   }
 
-  const onChangeInputHandler = (e: ChangeEvent ): void => {
+  const onChangeInputHandler = (e: React.ChangeEvent<HTMLInputElement> ): void => {
     setValue(e.target.value);
   }
 

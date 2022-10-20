@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Modal } from './ui/modal';
+import { Modal } from './ui';
 import './App.css'
 
 function App(): JSX.Element {
@@ -31,8 +31,8 @@ function App(): JSX.Element {
         <p>{items.length} items(s)</p>
 
         {items.length > 0 && (
-          <ul>
-            { items.map(item => <li key={`${item}-${items.length}`}>
+          <ul className='list'>
+            { items.map(item => <li key={`${item}-${items.length}`} className='list-item'>
                 <span>{item}</span>
                 <button onClick={() => onRemoveItem(item)}>x</button>
                 </li>
